@@ -24,7 +24,7 @@ class CoreFeaturesTests(TestCase):
             last_name="Doe", license_number="ABC123"
         )
 
-    def test_index_page_redirects(self):
+    def test_index_page_loads_successfully(self):
         url = reverse("taxi:index")
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
